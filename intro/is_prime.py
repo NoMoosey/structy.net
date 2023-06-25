@@ -11,14 +11,10 @@ You can assume that the input number is a positive integer.
 import math
 
 def is_prime(n):
-  is_prime_num = True
-  numbers_to_check = [*range(2, n)]
-  print(numbers_to_check)
   if n == 1:
     return False
   if n != 2:
-    for num in numbers_to_check:
-      print("Checking " + str(num))
+    for num in range(2, n):
       if n % num == 0:
         return False
     return True
